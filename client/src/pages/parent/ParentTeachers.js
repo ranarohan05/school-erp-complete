@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../../components/Navbar";
 
-const API = "http://localhost:5000/api";
+const API = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 const COLORS = ["#7c3aed","#0891b2","#059669","#d97706","#db2777","#e53e3e"];
 const getColor = (subject) => {
   if (!subject) return "#7c3aed";

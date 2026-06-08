@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../../components/Navbar";
 
-const API = "http://localhost:5000/api";
+const API = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 const EMPTY_FORM = { name:"", email:"", password:"", class:"", rollNumber:"", phone:"" };
 
 export default function AdminStudents() {

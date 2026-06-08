@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../../components/Navbar";
 
-const API = "http://localhost:5000/api";
+const API = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 const PRIORITY_STYLE = {
   normal:    { bg:"#ebf8ff", color:"#2b6cb0", label:"Normal" },
   important: { bg:"#fffbeb", color:"#92400e", label:"Important" },

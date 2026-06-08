@@ -3,7 +3,7 @@ import axios from "axios";
 import Navbar from "../../components/Navbar";
 
 const SUBJECTS = ["Math", "Science", "English", "History", "Geography", "PE"];
-const API = "http://localhost:5000/api";
+const API = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 
 export default function TeacherAttendance() {
   const [subject, setSubject]     = useState(SUBJECTS[0]);

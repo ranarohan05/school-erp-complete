@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../../components/Navbar";
 
-const API = "http://localhost:5000/api";
+const API = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 const DAYS = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 const DAY_SHORT = { Monday:"Mon", Tuesday:"Tue", Wednesday:"Wed", Thursday:"Thu", Friday:"Fri", Saturday:"Sat" };
 const COLORS = ["#7c3aed","#0891b2","#059669","#d97706","#db2777","#e53e3e","#6366f1","#0d9488"];

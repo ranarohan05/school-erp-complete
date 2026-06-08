@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "../../components/Navbar";
 
-const API = "http://localhost:5000/api";
+const API = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 const statusColor = { paid:"#276749", partial:"#d97706", unpaid:"#c53030" };
 const statusBg    = { paid:"#f0fff4", partial:"#fefcbf", unpaid:"#fff5f5" };
 

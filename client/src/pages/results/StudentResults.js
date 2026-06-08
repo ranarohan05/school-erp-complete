@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "../../components/Navbar";
 
-const API = "http://localhost:5000/api";
+const API = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 
 const gradeColor = (g) => {
   const map = { "A+":"#276749","A":"#276749","B+":"#2b6cb0","B":"#2b6cb0","C":"#d97706","D":"#c05621","F":"#c53030" };

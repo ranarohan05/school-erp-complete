@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar";
 
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const DAYS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-const API = "http://localhost:5000/api";
+const API = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 
 export default function StudentAttendance() {
   const [records, setRecords] = useState([]);

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../../components/Navbar";
 
-const API = "http://localhost:5000/api";
+const API = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 const BADGES = ["🏆","🥇","🥈","🥉","⭐","🎖️","🎓","💡"];
 const TYPES  = ["academic","sports","cultural","other"];
 const TYPE_COLOR = { academic:"#7c3aed", sports:"#059669", cultural:"#d97706", other:"#0891b2" };
